@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{05FC5058-7604-C1A7-DC82-B49AEB4301EF}</ProjectGuid>
+    <ProjectGuid>{88C81BAE-26F7-EA33-289B-336B2766825E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\DeathBehaviour.cs" />
+     <Compile Include="Assets\GlareBehaviour.cs" />
      <Compile Include="Assets\Scripts\AniBehaviours\AttackBehaviour.cs" />
      <Compile Include="Assets\Scripts\AniBehaviours\DamageBehaviour.cs" />
      <Compile Include="Assets\Scripts\AniBehaviours\JumpBehaviour.cs" />
@@ -58,12 +59,13 @@
      <Compile Include="Assets\Scripts\Enemy\EnemyStates\MeleeState.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyStates\PatrolState.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyStates\RangedState.cs" />
-     <Compile Include="Assets\Scripts\FistCollider.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\HUDs\BarScript.cs" />
      <Compile Include="Assets\Scripts\HUDs\Stat.cs" />
      <Compile Include="Assets\Scripts\Misc\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Misc\Character.cs" />
      <Compile Include="Assets\Scripts\Misc\CollisionTrigger.cs" />
+     <Compile Include="Assets\Scripts\Misc\FistCollider.cs" />
      <Compile Include="Assets\Scripts\Misc\IgnoreCollision.cs" />
      <Compile Include="Assets\Scripts\Misc\Rock.cs" />
      <Compile Include="Assets\Scripts\Player\Player.cs" />

@@ -161,6 +161,7 @@ public class Player : Character {
 //		if (vertical == 0) {
 			if (Input.GetKeyDown (KeyCode.Z)) {
 				MyAni.SetTrigger ("Attack");
+				mp.CurrVal -= 5;
 			}
 
 			if (Input.GetKeyDown (KeyCode.X)) {
@@ -173,6 +174,7 @@ public class Player : Character {
 
 			if (Input.GetKeyDown (KeyCode.V)) {
 				MyAni.SetTrigger ("Throw");
+				mp.CurrVal -= 10;
 			}
 		//}
 
@@ -270,4 +272,11 @@ public class Player : Character {
 		transform.position = startPos;
 	}
 	#endregion
+
+	private void OnCollisionEnter2D(Collision2D other) {
+		if (other.gameObject.tag == "Coin") {
+			GameManager.Instance.CollectedCoins += 25;
+			Destroy (other.gameObject);
+		}
+	}
 }

@@ -124,6 +124,8 @@ public class Enemy : Character {
 		if (!IsDead) {
 			MyAni.SetTrigger ("Damage");
 		} else {
+			GameObject coin = (GameObject)Instantiate (GameManager.Instance.CoinPrefab, new Vector2 (transform.position.x, transform.position.y +.2f), Quaternion.identity);
+			Physics2D.IgnoreCollision (coin.GetComponent<Collider2D> (), GetComponent<Collider2D>());
 			MyAni.SetTrigger ("Die");
 			yield return null;
 		}

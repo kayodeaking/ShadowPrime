@@ -15,6 +15,7 @@ public class DeathBehaviour : StateMachineBehaviour {
 		deathTimer += Time.deltaTime;
 
 		if (deathTimer >= respawnTime) {
+			deathTimer = 0;
 			animator.GetComponent<Character> ().Death ();
 		}
 	}

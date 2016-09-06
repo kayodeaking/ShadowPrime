@@ -13,7 +13,6 @@ public class Player : Character {
 	[SerializeField]
 	private Stat mp;
 
-
 	public static Player GamePlayer {
 		get {
 			if (gamePlayer == null) {
@@ -73,10 +72,17 @@ public class Player : Character {
 		}
 	}
 	#endregion
+	public bool IsFalling {
+		get {
+			return MyRigi.velocity.y < 0;
+		}
+	}
 
 	public static float Horizontal { get; set; }
 	public static float Vertical { get; set;}
 
+	private float manaRestoreTimer = 5;
+	private float manaTimer = 0;
 
 	public override void Start () {
 		
@@ -88,7 +94,7 @@ public class Player : Character {
 
 
 	void Update () {
-
+		
 		if (!TakingDamage && !IsDead) {
 
 			if (transform.position.y <= -14f) {
@@ -97,7 +103,7 @@ public class Player : Character {
 			HandleInput ();
 		} 
 
-
+		RestoreMana ();
 	}
 
 	// Update is called once per frame
@@ -128,7 +134,8 @@ public class Player : Character {
 	private void HandleMovement(float horiz, float verti) {
 
 		//Falling from the sky
-		if (MyRigi.velocity.y < 0) {
+		if (IsFalling) {
+			gameObject.layer = 10;
 			MyAni.SetBool ("Land", true);
 		}
 
@@ -158,25 +165,26 @@ public class Player : Character {
 
 	private void HandleInput() {
 		
-//		if (vertical == 0) {
-			if (Input.GetKeyDown (KeyCode.Z)) {
+		if (Vertical == 0) {
+			if (Input.GetButtonDown("Punch") && mp.CurrVal > 0) {
 				MyAni.SetTrigger ("Attack");
 				mp.CurrVal -= 5;
 			}
 
-			if (Input.GetKeyDown (KeyCode.X)) {
+			if (Input.GetButtonDown("Dodge")) {
 				MyAni.SetTrigger ("Roll");
 			}
 
-			if (Input.GetKeyDown (KeyCode.C)) {
+			if (Input.GetButtonDown("Jump") && !IsFalling) {
 				MyAni.SetTrigger ("Jump");
+				Jump = true;
 			}
 
-			if (Input.GetKeyDown (KeyCode.V)) {
+			if (Input.GetButtonDown("Throw") && mp.CurrVal > 0) {
 				MyAni.SetTrigger ("Throw");
 				mp.CurrVal -= 10;
 			}
-		//}
+		}
 
 	}
 
@@ -223,7 +231,12 @@ public class Player : Character {
 	public override void OnTriggerEnter2D(Collider2D other) {
 		if (!Roll) {
 			base.OnTriggerEnter2D (other);
+			if (Attack && other.gameObject.tag == "Chest") {
+				LootBox.Instance.ChestAni.SetBool ("Opened", true);
+				LootBox.Instance.DropLoot ();
+			}
 		}
+
 	}
 
 	private IEnumerator IndicateImmortalDamage () {
@@ -266,8 +279,7 @@ public class Player : Character {
 	public override void Death ()
 	{
 		MyRigi.velocity = Vector2.zero;
-		MyAni.ResetTrigger ("Die");
-		MyAni.SetTrigger ("Idle");
+		MyAni.SetTrigger ("Revive");
 		hp.CurrVal  = hp.MaxVal;
 		transform.position = startPos;
 	}
@@ -277,6 +289,21 @@ public class Player : Character {
 		if (other.gameObject.tag == "Coin") {
 			GameManager.Instance.CollectedCoins += 25;
 			Destroy (other.gameObject);
+		}
+		if (other.gameObject.tag == "Potion") {
+			hp.CurrVal += 10;
+			Destroy (other.gameObject);
+		}
+	}
+
+	private void RestoreMana() {
+		
+		manaTimer += Time.deltaTime;
+		if (manaTimer >= manaRestoreTimer) {
+			if (mp.CurrVal < mp.MaxVal) {
+				mp.CurrVal += 10;
+			}
+			manaTimer = 0;
 		}
 	}
 }

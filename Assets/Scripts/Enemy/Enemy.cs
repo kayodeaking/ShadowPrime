@@ -46,6 +46,18 @@ public class Enemy : Character {
 
 	#endregion
 
+	private bool dropItem = true;
+
+	private static Enemy instance;
+
+	public static Enemy Instance {
+		get {
+			if (instance == null) {
+				instance = GameObject.FindObjectOfType<Enemy> ();
+			}
+			return instance;
+		}
+	}
 	// Use this for initialization
 	public override void Start () {
 		base.Start ();
@@ -94,6 +106,9 @@ public class Enemy : Character {
 				transform.Translate (GetDirection () * (speed * Time.deltaTime));
 			} else if (currState is PatrolState) {
 				ChangeDirection ();
+			} else if (currState is RangedState) {
+				Target = null;
+				ChangeState (new IdleState());
 			}
 		}
 	}
@@ -124,8 +139,11 @@ public class Enemy : Character {
 		if (!IsDead) {
 			MyAni.SetTrigger ("Damage");
 		} else {
-			GameObject coin = (GameObject)Instantiate (GameManager.Instance.CoinPrefab, new Vector2 (transform.position.x, transform.position.y +.2f), Quaternion.identity);
-			Physics2D.IgnoreCollision (coin.GetComponent<Collider2D> (), GetComponent<Collider2D>());
+			if (dropItem) {
+				GameObject coin = (GameObject)Instantiate (GameManager.Instance.CoinPrefab, new Vector3 (transform.position.x, transform.position.y), Quaternion.identity);
+				Physics2D.IgnoreCollision (coin.GetComponent<Collider2D> (), GetComponent<Collider2D> ());
+				dropItem = false;
+			}
 			MyAni.SetTrigger ("Die");
 			yield return null;
 		}
@@ -138,6 +156,7 @@ public class Enemy : Character {
 
 	public override void Death ()
 	{
+		dropItem = true;
 		MyAni.ResetTrigger ("Die");
 		MyAni.SetTrigger ("Idle");
 		hp.CurrVal = hp.MaxVal;
@@ -145,9 +164,4 @@ public class Enemy : Character {
 	}
 
 	#endregion
-
-
-
-
-
 }

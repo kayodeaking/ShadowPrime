@@ -39,6 +39,13 @@ public abstract class Character : MonoBehaviour {
 		}
 	}
 
+	[SerializeField]
+	protected float respawnTimer;
+	public float Respawn { 
+		get { 
+			return respawnTimer;
+		}
+	}
 	// Use this for initialization
 	public virtual void Start () {
 	

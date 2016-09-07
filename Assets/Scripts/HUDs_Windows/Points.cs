@@ -39,6 +39,7 @@ public class Points : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		currPoints = 25;
 	}
 	
 	// Update is called once per frame

@@ -74,6 +74,7 @@
      <Compile Include="Assets\Scripts\Misc\PlatMovement.cs" />
      <Compile Include="Assets\Scripts\Misc\Rock.cs" />
      <Compile Include="Assets\Scripts\Player\Player.cs" />
+     <Compile Include="Assets\Shop.cs" />
      <None Include="Assets\MyPlaceHolders\Dark Space\Background\fout.shader" />
      <None Include="Assets\MyPlaceHolders\Dark Space\Background\vout.shader" />
  <Reference Include="UnityEngine.UI">

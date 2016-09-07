@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 776c1a87d642049a888382eb728b1c1c
-timeCreated: 1472599817
+timeCreated: 1473261348
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -21,6 +21,10 @@ TextureImporter:
     21300028: Shop_14
     21300030: Shop_15
     21300032: Shop_16
+    21300034: Shop_17
+    21300036: Shop_18
+    21300038: Shop_19
+    21300040: Shop_20
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -75,7 +79,7 @@ TextureImporter:
         width: 72
         height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 9, y: 29}
@@ -95,7 +99,7 @@ TextureImporter:
         width: 73
         height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -29.5, y: 31}
@@ -112,7 +116,7 @@ TextureImporter:
         width: 74
         height: 63
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -30, y: 31.5}
@@ -124,69 +128,74 @@ TextureImporter:
     - name: Shop_3
       rect:
         serializedVersion: 2
-        x: 324
-        y: 88
-        width: 81
-        height: 151
+        x: 330
+        y: 176
+        width: 75
+        height: 63
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -31.5, y: 75.5}
-        - {x: -40.5, y: 71.5}
-        - {x: -40.5, y: -75.5}
-        - {x: 40.5, y: -75.5}
-        - {x: 40.5, y: 41.5}
-        - {x: 13.5, y: 75.5}
+      - - {x: 7.5, y: 31.5}
+        - {x: -27.5, y: 31.5}
+        - {x: -37.5, y: 26.5}
+        - {x: -37.5, y: -31.5}
+        - {x: 37.5, y: -31.5}
+        - {x: 37.5, y: -1.5}
+        - {x: 14.5, y: 24.5}
     - name: Shop_4
       rect:
         serializedVersion: 2
-        x: 432
-        y: 88
-        width: 81
-        height: 151
+        x: 438
+        y: 176
+        width: 75
+        height: 63
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -31.5, y: 75.5}
-        - {x: -40.5, y: 71.5}
-        - {x: -40.5, y: -75.5}
-        - {x: 40.5, y: -75.5}
-        - {x: 40.5, y: 41.5}
-        - {x: 13.5, y: 75.5}
+      - - {x: 7.5, y: 31.5}
+        - {x: -27.5, y: 31.5}
+        - {x: -37.5, y: 26.5}
+        - {x: -37.5, y: -31.5}
+        - {x: 37.5, y: -31.5}
+        - {x: 37.5, y: -1.5}
+        - {x: 14.5, y: 24.5}
     - name: Shop_5
       rect:
         serializedVersion: 2
-        x: 540
-        y: 88
-        width: 81
-        height: 151
+        x: 547
+        y: 176
+        width: 74
+        height: 63
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -40.5, y: 75.5}
-        - {x: -40.5, y: -75.5}
-        - {x: 40.5, y: -75.5}
-        - {x: 40.5, y: 45.5}
-        - {x: 32.5, y: 75.5}
+      - - {x: -30, y: 31.5}
+        - {x: -37, y: 26.5}
+        - {x: -37, y: -31.5}
+        - {x: 37, y: -31.5}
+        - {x: 37, y: -0.5}
+        - {x: 14, y: 31.5}
     - name: Shop_6
       rect:
         serializedVersion: 2
-        x: 648
-        y: 88
-        width: 81
-        height: 149
+        x: 660
+        y: 176
+        width: 69
+        height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -40.5, y: 74.5}
-        - {x: -40.5, y: -74.5}
-        - {x: 40.5, y: -74.5}
-        - {x: 40.5, y: 56.5}
-        - {x: 28.5, y: 74.5}
+      - - {x: -34.5, y: 30.5}
+        - {x: -34.5, y: -24.5}
+        - {x: -33.5, y: -30.5}
+        - {x: 33.5, y: -30.5}
+        - {x: 34.5, y: -28.5}
+        - {x: 34.5, y: 1.5}
+        - {x: 23.5, y: 30.5}
     - name: Shop_7
       rect:
         serializedVersion: 2
@@ -195,7 +204,7 @@ TextureImporter:
         width: 66
         height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -23, y: 30.5}
@@ -211,175 +220,245 @@ TextureImporter:
         y: 88
         width: 68
         height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.425}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -31, y: 37}
-        - {x: -34, y: 28}
-        - {x: -34, y: -37}
-        - {x: 34, y: -37}
-        - {x: 34, y: 36}
-        - {x: 31, y: 37}
+      - - {x: -31, y: 42.550003}
+        - {x: -34, y: 33.550003}
+        - {x: -34, y: -31.449997}
+        - {x: 34, y: -31.449997}
+        - {x: 34, y: 41.550003}
+        - {x: 31, y: 42.550003}
     - name: Shop_9
       rect:
         serializedVersion: 2
-        x: 216
-        y: 88
+        x: 215
+        y: 87
         width: 81
         height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.425}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -28.5, y: 37}
-        - {x: -40.5, y: 22}
-        - {x: -40.5, y: -37}
-        - {x: 40.5, y: -37}
-        - {x: 40.5, y: 37}
+      - - {x: -29.5, y: 42.550003}
+        - {x: -40.5, y: 18.550003}
+        - {x: -40.5, y: -31.449997}
+        - {x: 40.5, y: -31.449997}
+        - {x: 40.5, y: 42.550003}
     - name: Shop_10
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 88
+        width: 81
+        height: 88
+      alignment: 9
+      pivot: {x: 0.5, y: 0.37}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10.5, y: 55.440002}
+        - {x: -36.5, y: 24.440002}
+        - {x: -40.5, y: 8.440002}
+        - {x: -40.5, y: -29.559998}
+        - {x: -39.5, y: -32.559998}
+        - {x: 40.5, y: -32.559998}
+        - {x: 40.5, y: 55.440002}
+    - name: Shop_11
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 88
+        width: 81
+        height: 88
+      alignment: 9
+      pivot: {x: 0.5, y: 0.37}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10.5, y: 55.440002}
+        - {x: -36.5, y: 24.440002}
+        - {x: -40.5, y: 8.440002}
+        - {x: -40.5, y: -29.559998}
+        - {x: -39.5, y: -32.559998}
+        - {x: 40.5, y: -32.559998}
+        - {x: 40.5, y: 55.440002}
+    - name: Shop_12
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 88
+        width: 82
+        height: 88
+      alignment: 9
+      pivot: {x: 0.5, y: 0.37}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 55.440002}
+        - {x: -37, y: 24.440002}
+        - {x: -41, y: 8.440002}
+        - {x: -41, y: -29.559998}
+        - {x: -40, y: -32.559998}
+        - {x: 41, y: -32.559998}
+        - {x: 41, y: 55.440002}
+    - name: Shop_13
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 88
+        width: 81
+        height: 88
+      alignment: 9
+      pivot: {x: 0.5, y: 0.37}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10.5, y: 55.440002}
+        - {x: -36.5, y: 24.440002}
+        - {x: -40.5, y: 8.440002}
+        - {x: -40.5, y: -29.559998}
+        - {x: -39.5, y: -32.559998}
+        - {x: 40.5, y: -32.559998}
+        - {x: 40.5, y: 55.440002}
+    - name: Shop_14
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 81
         height: 87
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.37}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -4.5, y: 43.5}
-        - {x: -22.5, y: 30.5}
-        - {x: -38.5, y: 4.5}
-        - {x: -40.5, y: -9.5}
-        - {x: -40.5, y: -43.5}
-        - {x: 40.5, y: -43.5}
-        - {x: 40.5, y: 31.5}
-        - {x: 37.5, y: 43.5}
-    - name: Shop_11
+      - - {x: -4.5, y: 54.81}
+        - {x: -22.5, y: 41.81}
+        - {x: -38.5, y: 15.810001}
+        - {x: -40.5, y: 1.8100014}
+        - {x: -40.5, y: -32.19}
+        - {x: 40.5, y: -32.19}
+        - {x: 40.5, y: 42.81}
+        - {x: 37.5, y: 54.81}
+    - name: Shop_15
       rect:
         serializedVersion: 2
         x: 108
         y: 0
         width: 81
         height: 86
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.37}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 39.5, y: -6}
-        - {x: 40.5, y: 8}
-        - {x: 40.5, y: 22}
-        - {x: 24.5, y: 43}
-        - {x: 14.5, y: 43}
-        - {x: 10.5, y: 42}
-        - {x: -16.5, y: 25}
-        - {x: -38.5, y: 5}
-        - {x: -40.5, y: -6}
-        - {x: -40.5, y: -43}
-        - {x: 40.5, y: -43}
-        - {x: 40.5, y: -25}
-        - {x: 37.5, y: -22}
-    - name: Shop_12
+      - - {x: 39.5, y: 5.1800003}
+        - {x: 40.5, y: 19.18}
+        - {x: 40.5, y: 33.18}
+        - {x: 24.5, y: 54.18}
+        - {x: 14.5, y: 54.18}
+        - {x: 10.5, y: 53.18}
+        - {x: -16.5, y: 36.18}
+        - {x: -38.5, y: 16.18}
+        - {x: -40.5, y: 5.1800003}
+        - {x: -40.5, y: -31.82}
+        - {x: 40.5, y: -31.82}
+        - {x: 40.5, y: -13.82}
+        - {x: 37.5, y: -10.82}
+    - name: Shop_16
       rect:
         serializedVersion: 2
         x: 216
         y: 0
         width: 81
         height: 86
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.37}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 40.5, y: -1}
-        - {x: 38.5, y: 18}
-        - {x: 31.5, y: 43}
-        - {x: 7.5, y: 43}
-        - {x: -40.5, y: 15}
-        - {x: -40.5, y: -43}
-        - {x: 40.5, y: -43}
-        - {x: 40.5, y: -25}
-        - {x: 37.5, y: -22}
-    - name: Shop_13
+      - - {x: 40.5, y: 10.18}
+        - {x: 38.5, y: 29.18}
+        - {x: 31.5, y: 54.18}
+        - {x: 7.5, y: 54.18}
+        - {x: -40.5, y: 26.18}
+        - {x: -40.5, y: -31.82}
+        - {x: 40.5, y: -31.82}
+        - {x: 40.5, y: -13.82}
+        - {x: 37.5, y: -10.82}
+    - name: Shop_17
       rect:
         serializedVersion: 2
         x: 324
         y: 0
         width: 81
         height: 84
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.37}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 21.5, y: 42}
-        - {x: -33.5, y: 26}
-        - {x: -40.5, y: -4}
-        - {x: -40.5, y: -42}
-        - {x: 40.5, y: -42}
-        - {x: 40.5, y: 35}
-        - {x: 34.5, y: 42}
-    - name: Shop_14
+      - - {x: 21.5, y: 52.92}
+        - {x: -33.5, y: 36.92}
+        - {x: -40.5, y: 6.92}
+        - {x: -40.5, y: -31.08}
+        - {x: 40.5, y: -31.08}
+        - {x: 40.5, y: 45.92}
+        - {x: 34.5, y: 52.92}
+    - name: Shop_18
       rect:
         serializedVersion: 2
         x: 432
         y: 0
-        width: 82
+        width: 81
         height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 18, y: 40}
-        - {x: -36, y: 18}
-        - {x: -39, y: 7}
-        - {x: -41, y: -9}
-        - {x: -41, y: -40}
-        - {x: 41, y: -40}
-        - {x: 41, y: 40}
-    - name: Shop_15
+      - - {x: -40.5, y: -32}
+        - {x: 40.5, y: -32}
+        - {x: 40.5, y: 48}
+        - {x: -9.5, y: 48}
+        - {x: -40.5, y: 42}
+    - name: Shop_19
       rect:
         serializedVersion: 2
         x: 540
         y: 0
         width: 108
         height: 61
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -45, y: 30.5}
-        - {x: -51, y: 27.5}
-        - {x: -54, y: 7.5}
-        - {x: -54, y: -30.5}
-        - {x: 31, y: -30.5}
-        - {x: 54, y: -0.5}
-        - {x: 54, y: 29.5}
-        - {x: 51, y: 30.5}
-    - name: Shop_16
+      - - {x: -28.799988, y: 30.5}
+        - {x: -34.799988, y: 27.5}
+        - {x: -37.799988, y: 7.5}
+        - {x: -37.799988, y: -30.5}
+        - {x: 47.200012, y: -30.5}
+        - {x: 70.20001, y: -0.5}
+        - {x: 70.20001, y: 29.5}
+        - {x: 67.20001, y: 30.5}
+    - name: Shop_20
       rect:
         serializedVersion: 2
         x: 648
         y: 0
         width: 106
         height: 61
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 17, y: -9.5}
-        - {x: 27, y: -9.5}
-        - {x: 32, y: -8.5}
-        - {x: 53, y: 4.5}
-        - {x: 53, y: 25.5}
-        - {x: 44, y: 30.5}
-        - {x: -44, y: 30.5}
-        - {x: -50, y: 27.5}
-        - {x: -53, y: 7.5}
-        - {x: -53, y: -30.5}
-        - {x: 29, y: -30.5}
-        - {x: 30, y: -23.5}
-        - {x: 30, y: -14.5}
-        - {x: 25, y: -9.5}
+      - - {x: 32.900024, y: -9.5}
+        - {x: 42.900024, y: -9.5}
+        - {x: 47.900024, y: -8.5}
+        - {x: 68.900024, y: 4.5}
+        - {x: 68.900024, y: 25.5}
+        - {x: 59.900024, y: 30.5}
+        - {x: -28.099976, y: 30.5}
+        - {x: -34.099976, y: 27.5}
+        - {x: -37.099976, y: 7.5}
+        - {x: -37.099976, y: -30.5}
+        - {x: 44.900024, y: -30.5}
+        - {x: 45.900024, y: -23.5}
+        - {x: 45.900024, y: -14.5}
+        - {x: 40.900024, y: -9.5}
     outline: []
   spritePackingTag: 
   userData: 

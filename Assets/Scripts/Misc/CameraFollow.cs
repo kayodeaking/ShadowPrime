@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class CameraFollow : MonoBehaviour {
 
@@ -26,10 +27,12 @@ public class CameraFollow : MonoBehaviour {
 
 	private Transform target;
 
+	[SerializeField]
+	GameObject player;
 	// Use this for initialization
 	void Start () {
-		
-		target = GameObject.Find ("Player").transform;
+		target = player.transform;
+
 	}
 
 	void LateUpdate () {

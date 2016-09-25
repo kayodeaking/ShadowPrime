@@ -160,7 +160,7 @@ public class Player : Character {
 		} else if (verti == -1 && OnGround) {
 			MyAni.SetBool ("LookDown", true);
 		}
-			
+
 	}
 
 	private void HandleInput() {
@@ -231,7 +231,7 @@ public class Player : Character {
 	public override void OnTriggerEnter2D(Collider2D other) {
 		if (!Roll) {
 			base.OnTriggerEnter2D (other);
-			if (Attack && other.gameObject.tag == "Chest") {
+			if (Attack && other.tag == "Chest") {
 				LootBox.Instance.ChestAni.SetBool ("Opened", true);
 				LootBox.Instance.DropLoot ();
 			}
@@ -239,6 +239,17 @@ public class Player : Character {
 
 	}
 
+ 	void OnTriggerStay2D(Collider2D other) {
+		if (!Roll) {
+			if (!Jump && other.tag == "Door") {
+				if (Vertical > 0) {
+					GameManager.Instance.Switch (other.gameObject.name);
+					Debug.Log (other.gameObject.name);
+				}
+			}
+		}
+
+	}
 	private IEnumerator IndicateImmortalDamage () {
 
 		while (immortal) {

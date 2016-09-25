@@ -29,9 +29,11 @@ public class CameraFollow : MonoBehaviour {
 
 	[SerializeField]
 	GameObject player;
+
 	// Use this for initialization
 	void Start () {
 		target = player.transform;
+		transform.position = new Vector3 (Mathf.Clamp (target.position.x, xMin, xMax), Mathf.Clamp (target.position.y, yMin, yMax), transform.position.z);
 
 	}
 

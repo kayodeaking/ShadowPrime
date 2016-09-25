@@ -1,0 +1,13 @@
+<linker>
+	<assembly fullname="Assembly-CSharp">
+		<type fullname="Buttons">
+			<method name="CFButtonClick"/>
+			<method name="QuitButtonClick"/>
+			<method name="HOButtonClick"/>
+			<method name="NGButtonClick"/>
+			<method name="CloseErrorButtonClick"/>
+			<method name="ContiButtonClick"/>
+			<method name="MultiButtonClick"/>
+		</type>
+	</assembly>
+</linker>

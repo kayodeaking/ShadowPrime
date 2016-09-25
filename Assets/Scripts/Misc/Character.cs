@@ -33,6 +33,15 @@ public abstract class Character : MonoBehaviour {
 	public Animator MyAni{ get; private set;}
 
 	protected Vector2 startPos;
+
+	public Vector2 StartPos{
+		get {
+			return startPos;
+		}
+		set {
+			startPos = value;
+		}
+	}
 	public EdgeCollider2D FistCollider {
 		get {
 			return fistCollider;

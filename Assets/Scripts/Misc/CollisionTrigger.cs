@@ -16,13 +16,13 @@ public class CollisionTrigger : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.gameObject.name == "Player" || other.gameObject.tag == "Enemy") {
+		if (other.gameObject.tag == "Player" || other.gameObject.tag == "Enemy") {
 			Physics2D.IgnoreCollision (platformCollider, other, true);
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D other) {
-		if (other.gameObject.name == "Player" || other.gameObject.tag == "Enemy") {
+		if (other.gameObject.tag == "Player" || other.gameObject.tag == "Enemy") {
 			Physics2D.IgnoreCollision (platformCollider, other, false);
 		}
 	}

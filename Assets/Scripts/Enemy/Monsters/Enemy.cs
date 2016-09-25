@@ -103,6 +103,7 @@ public class Enemy : Character {
 		if (!Attack) {
 			if ((GetDirection ().x > 0 && transform.position.x < rightEdge.position.x) || (GetDirection ().x < 0 && transform.position.x > leftEdge.position.x)) {
 				MyAni.SetFloat ("Speed", 1);
+				Debug.Log (GetDirection ().x);
 				transform.Translate (GetDirection () * (speed * Time.deltaTime));
 			} else if (currState is PatrolState) {
 				ChangeDirection ();

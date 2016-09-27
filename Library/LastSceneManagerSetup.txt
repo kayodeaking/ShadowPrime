@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes_Levels/DreamSpace.unity
+- path: Assets/Scenes_Levels/Tutorial/DreamSpace.unity
   isLoaded: 1
   isActive: 1

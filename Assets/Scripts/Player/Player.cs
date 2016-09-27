@@ -140,7 +140,7 @@ public class Player : Character {
 		}
 
 		//Dodge on the ground
-		if (!Attack && !Roll && (OnGround || airControl)) {
+		if (!Attack && !Roll && (OnGround || airControl) && verti == 0) {
 			dodgeSpeed = 100;
 			MyRigi.velocity = new Vector2 (horiz * speed, MyRigi.velocity.y);
 		}
@@ -151,16 +151,15 @@ public class Player : Character {
 			MyRigi.AddForce(new Vector2(0, jumpForce));
 		}
 			
-		if (verti == 1 && OnGround) {
+		if (verti > 0 && OnGround) {
 			MyAni.SetBool ("LookUp", true);
-		} else if (verti == 0 && OnGround) {
+		} else if (verti < 0 && OnGround) {
+			MyAni.SetBool ("LookDown", true);
+		} else {
 			MyAni.SetBool ("LookUp", false);
 			MyAni.SetFloat ("Speed", Mathf.Abs(horiz));
 			MyAni.SetBool ("LookDown", false);
-		} else if (verti == -1 && OnGround) {
-			MyAni.SetBool ("LookDown", true);
 		}
-
 	}
 
 	private void HandleInput() {

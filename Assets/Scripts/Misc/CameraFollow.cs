@@ -20,6 +20,11 @@ public class CameraFollow : MonoBehaviour {
 	[SerializeField]
 	private float yMax;
 
+	public float YMax {
+		get;
+		set;
+	}
+
 	[SerializeField]
 	private float xMin;
 	[SerializeField]
@@ -38,7 +43,7 @@ public class CameraFollow : MonoBehaviour {
 	}
 
 	void LateUpdate () {
-	
-		transform.position = new Vector3 (Mathf.Clamp (target.position.x, xMin, xMax), Mathf.Clamp (target.position.y, yMin, yMax), transform.position.z);
+
+		transform.position = new Vector3 (Mathf.Clamp (target.position.x, xMin, xMax), Mathf.Clamp (target.position.y + Player.Vertical, yMin, yMax), transform.position.z);
 	}
 }

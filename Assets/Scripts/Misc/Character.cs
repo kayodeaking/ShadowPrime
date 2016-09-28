@@ -55,6 +55,14 @@ public abstract class Character : MonoBehaviour {
 			return respawnTimer;
 		}
 	}
+
+	[SerializeField]
+	protected bool canRespawn;
+	public bool CanRespawn { 
+		get { 
+			return canRespawn;
+		}
+	}
 	// Use this for initialization
 	public virtual void Start () {
 	

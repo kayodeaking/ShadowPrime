@@ -113,6 +113,7 @@ public class Player : Character {
 			
 			float horizontal = Input.GetAxis ("Horizontal");
 			float vertical = Input.GetAxis ("Vertical");
+
 			Horizontal = horizontal;
 			Vertical = vertical;
 

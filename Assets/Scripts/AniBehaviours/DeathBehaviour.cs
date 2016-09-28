@@ -13,11 +13,13 @@ public class DeathBehaviour : StateMachineBehaviour {
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-		deathTimer += Time.deltaTime;
+		if (animator.GetComponent<Character> ().CanRespawn) {
+			deathTimer += Time.deltaTime;
 
-		if (deathTimer >= respawnTime) {
-			deathTimer = 0;
-			animator.GetComponent<Character> ().Death ();
+			if (deathTimer >= respawnTime) {
+				deathTimer = 0;
+				animator.GetComponent<Character> ().Death ();
+			}
 		}
 	}
 
